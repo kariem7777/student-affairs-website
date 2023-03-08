@@ -10,7 +10,57 @@ body {
     margin: 0 0;
     padding: 0 0;
     font-family: 'Roboto', sans-serif;
+
 }
+
+div {
+    margin: auto;
+    margin-top: 8%;
+    width: fit-content;
+}
+
+input {
+    display: block;
+    padding: 0px 5px;
+    margin: 10px;
+    border: none;
+    border-bottom: 1px white solid;
+    background-color: transparent;
+    height: 30px;
+}
+
+.container {
+    margin: auto;
+    margin-top: 2%;
+
+    width: fit-content;
+}
+
+input:focus-visible {
+    outline: 0;
+}
+
+button {
+    background-color: transparent;
+    border: 1px white solid;
+    margin-top: 15%;
+    padding: 10px 30px;
+    color: white;
+    transition: background-color 0.5s;
+
+}
+
+button:hover {
+    background-color: #071e26;
+}
+
+.Search {
+    padding: 10px 10px;
+    text-align: center;
+    color: white;
+}
+
+
 
 nav section {
     display: flex;
