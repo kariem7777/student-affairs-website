@@ -1,0 +1,68 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.content .register{
+  font-size: 35px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient(135deg,#71b7e6,#afdd2d);
+}
+.content{
+  border: 20px solid red;
+}
+.first-name{
+  margin-bottom: 15px;
+  align-items: center;
+  display: flex;
+
+
+}
+.second-name{
+  margin-bottom: 15px;
+  align-items: center;
+  display: flex;
+
+
+}
+.id{
+  margin-bottom: 15px;
+  align-items: center;
+  display: flex;
+
+
+}
+.department{
+  margin-bottom: 15px;
+  align-items: center;
+  display: flex;
+
+
+}
+.Date{
+  margin-bottom: 15px;
+  align-items: center;
+  display: flex;
+
+
+}
+.mobile{
+  margin-bottom: 15px;
+  align-items: center;
+  display: flex;
+
+
+}
+.email{
+  margin-bottom: 15px;
+  align-items: center;
+  display: flex;
+
+
+}
