@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student affairs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Register.css">
+</head>
+
+<body>
+    <div class="nav">
+        <section class="logo">students affairs</section>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Register students.html">Resgister students</a></li>
+            <li><a href="Edit students.html">Edit students</a></li>
+            <li><a href="Search.html">Search students</a></li>
+            <li><a href="Assignment Department.html">Assignment Department</a></li>
+            <li><a href="View students.html">View students</a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <div class="form">
+            <h2>Resgister New Student</h2><br>
+            <div class="input-field">
+                <div class="row">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="ID">
+                </div>
+
+                <div class="row">
+                    <input type="text" placeholder="Mobile">
+                    <input placeholder="Age" type="text" onfocus="(this.type='date')" />
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="GPA">
+                </div>
+                <div class="row">
+                    <select name="Department">
+                        <option value="" disabled selected hidden>Department</option>
+                        <option value="CS">CS</option>
+                        <option value="IT">IT</option>
+                        <option value="AI">AI</option>
+                        <option value="IS">IS</option>
+                        <option value="DS">DS</option>
+
+                    </select>
+                    <select name="Gender">
+                        <option value="" disabled selected hidden>Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <select name="Level">
+                        <option value="" disabled selected hidden>Level</option>
+                        <option value="1">Level 1</option>
+                        <option value="2">Level 2</option>
+                        <option value="3">Level 3</option>
+                        <option value="3">Level 4</option>
+
+
+                    </select>
+                    <select name="Status">
+                        <option value="" disabled selected hidden>Status</option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" name="sumbit">submit</button>
+
+
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+</div>
+
+</html>

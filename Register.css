@@ -72,7 +72,7 @@ li a:hover:after {
 
 
 .box {
-    min-width: 300px;
+    width: auto;
     height: auto;
     border: 2px solid rgba(255, 255, 255, .5);
     background-color: transparent;
@@ -87,10 +87,24 @@ li a:hover:after {
 .form {
     width: auto;
     text-align: center;
-    padding: 10px;
 }
 
-.search input {
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+select {
+    width: 170px;
+    border: 1px solid black;
+
+    background-color: transparent;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input-field input {
     display: block;
     padding: 2px 0px;
     width: auto;
@@ -115,7 +129,6 @@ button {
     font-weight: bold;
     transition: 0.3s;
     border-radius: 5px;
-    margin: 5px;
 
 }
 
