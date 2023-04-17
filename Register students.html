@@ -10,6 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Register.css">
+
+    <script>
+ console.log(localStorage);
+
+    </script>
 </head>
 
 <body>
@@ -31,7 +36,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="success">
-                            <input type="text" placeholder="Name" name="name">
+                            <input type="text" placeholder="Name" name="name" id="name">
                         </div>
                         <p>Invalid name</p>
                     </div>
@@ -118,7 +123,7 @@
 
                 </div>
             </div>
-            <button type="submit">submit</button>
+            <button type="submit" id="b1">submit</button>
         </form>
     </div>
     <script src="register.js"></script>

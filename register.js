@@ -8,7 +8,7 @@ let statuss = document.querySelector("[name='Status']");
 let level = document.querySelector("[name='Level']");
 let form = document.getElementById("form");
 let mail = document.querySelector("[name='mail']");
-
+const b1 = document.getElementById("b1");
 form.addEventListener('submit', e => {
     e.preventDefault();
 
@@ -40,7 +40,7 @@ let succ = (element) => {
 }
 
 const Valid = () => {
-    if (username.value.length > 16 || username.value.length <= 0) {
+    if (username.value.length > 52 || username.value.length <= 0) {
         err(username, "name is too long");
     } else {
         succ(username);
@@ -91,3 +91,10 @@ const Valid = () => {
         succselect(dep)
     }
 }
+
+b1.onclick = function(){
+
+    localStorage.setItem(username.value, JSON.stringify([ID.value, mob.value, gpa.value, dep.value, gender.value, statuss.value, 
+    level.value, form.value, mail.value]));
+
+};
