@@ -84,7 +84,7 @@ li a:hover:after {
     padding: 10px;
 }
 
-.form {
+form {
     width: auto;
     text-align: center;
 }
@@ -94,14 +94,23 @@ li a:hover:after {
     justify-content: space-around;
 }
 
+.col {
+    text-align: left;
+    margin: 8px;
+}
+
+.col p {
+    color: red;
+    font-size: .8em;
+    display: none;
+}
+
 select {
     width: 170px;
     border: 1px solid black;
 
     background-color: transparent;
     height: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .input-field input {
@@ -109,13 +118,13 @@ select {
     padding: 2px 0px;
     width: auto;
     height: auto;
-    color: black;
+
     background-color: transparent;
     border: none;
     outline: none;
-    border-bottom: 1px solid black;
-    margin: 10px;
+
 }
+
 
 ::placeholder {
 
@@ -136,4 +145,22 @@ button:hover {
     background-color: black;
     color: white;
 
+}
+
+
+.error {
+    border-bottom: 1px solid red;
+    color: red;
+}
+
+.error-s {
+    border: 1px solid red;
+    color: red;
+}
+
+
+
+.success {
+    border-bottom: 1px solid black;
+    color: black;
 }

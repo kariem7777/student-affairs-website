@@ -25,63 +25,98 @@
         </ul>
     </div>
     <div class="box">
-        <div class="form">
+        <form ID="form">
             <h2>Resgister New Student</h2><br>
             <div class="input-field">
                 <div class="row">
-                    <input type="text" placeholder="Name">
-                    <input type="text" placeholder="ID">
+                    <div class="col">
+                        <div class="success">
+                            <input type="text" placeholder="Name" name="name">
+                        </div>
+                        <p>Invalid name</p>
+                    </div>
+                    <div class="col">
+                        <div class="success">
+                            <input type="text" placeholder="ID" name="ID">
+                        </div>
+                        <p>Invalid ID</p>
+                    </div>
                 </div>
 
                 <div class="row">
-                    <input type="text" placeholder="Mobile">
-                    <input placeholder="Age" type="text" onfocus="(this.type='date')" />
+                    <div class="col">
+                        <div class="success">
+                            <input type="text" placeholder="Mobile" name="mobile">
+                        </div>
+                        <p>Invalid name</p>
+                    </div>
+                    <div class="col">
+                        <div class="success">
+                            <input placeholder="Age" type="text" onfocus="(this.type='date')" name="Age" />
+                        </div>
+                        <p>Invalid name</p>
+                    </div>
                 </div>
                 <div class="row">
-                    <input type="text" placeholder="GPA">
+                    <div class="col">
+                        <div class="success">
+                            <input type="text" placeholder="GPA" name="GPA">
+                        </div>
+                        <p>Invalid name</p>
+                    </div>
                 </div>
                 <div class="row">
-                    <select name="Department">
-                        <option value="" disabled selected hidden>Department</option>
-                        <option value="CS">CS</option>
-                        <option value="IT">IT</option>
-                        <option value="AI">AI</option>
-                        <option value="IS">IS</option>
-                        <option value="DS">DS</option>
+                    <div class="col">
+                        <select name="Department" class="success">
+                            <option value="" disabled selected hidden>Department</option>
+                            <option value="CS">CS</option>
+                            <option value="IT">IT</option>
+                            <option value="AI">AI</option>
+                            <option value="IS">IS</option>
+                            <option value="DS">DS</option>
 
-                    </select>
-                    <select name="Gender">
-                        <option value="" disabled selected hidden>Gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
+                        </select>
+                        <p>Invalid name</p>
+                    </div>
+                    <div class="col">
+                        <select name="Gender" class="success">
+                            <option value="" disabled selected hidden>Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <p>Invalid name</p>
+                    </div>
+
                 </div>
 
                 <div class="row">
-                    <select name="Level">
-                        <option value="" disabled selected hidden>Level</option>
-                        <option value="1">Level 1</option>
-                        <option value="2">Level 2</option>
-                        <option value="3">Level 3</option>
-                        <option value="3">Level 4</option>
+                    <div class="col">
+                        <select name="Level" class="success">
+                            <option value="" disabled selected hidden>Level</option>
+                            <option value="1">Level 1</option>
+                            <option value="2">Level 2</option>
+                            <option value="3">Level 3</option>
+                            <option value="3">Level 4</option>
 
 
-                    </select>
-                    <select name="Status">
-                        <option value="" disabled selected hidden>Status</option>
-                        <option value="Active">Active</option>
-                        <option value="Inactive">Inactive</option>
-                    </select>
+                        </select>
+                        <p>Invalid name</p>
+                    </div>
+                    <div class="col">
+                        <select name="Status" class="success">
+                            <option value="" disabled selected hidden>Status</option>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
+                        <p>Invalid name</p>
+                    </div>
+
                 </div>
             </div>
-            <button type="button" name="sumbit">submit</button>
-
-
-        </div>
-
+            <button type="submit">submit</button>
+        </form>
     </div>
-    </div>
-
+    <script src="register.js"></script>
 </body>
 
 </div>
