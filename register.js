@@ -7,6 +7,7 @@ let gender = document.querySelector("[name='Gender']");
 let statuss = document.querySelector("[name='Status']");
 let level = document.querySelector("[name='Level']");
 let form = document.getElementById("form");
+let mail = document.querySelector("[name='mail']");
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -60,6 +61,11 @@ const Valid = () => {
         err(gpa, "Invalid GPA");
     } else {
         succ(gpa);
+    }
+    if (mail.value.length == 0) {
+        err(mail, "Invalid Mail");
+    } else {
+        succ(mail);
     }
 
     if (gender.value == "") {
