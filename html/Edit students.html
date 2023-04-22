@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="file:///home/kariem/Downloads/web/CSS/edit.css">
+  <link rel="stylesheet" href="file:///home/kariem/Downloads/web/CSS/Register.css">
+  <link rel="stylesheet" href="file:///home/kariem/Downloads/web/CSS/header.css">
+  <link rel="stylesheet" href="file:///home/kariem/Downloads/web/CSS/utlilites.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="file:///home/kariem/Downloads/web/html/Home.html">home</a></li>
+        <li><a href="file:///home/kariem/Downloads/web/html/Register students.html">Resgister students</a></li>
+        <li><a href="file:///home/kariem/Downloads/web/html/Edit students.html">Edit students</a></li>
+        <li><a href="file:///home/kariem/Downloads/web/html/Search.html">Search students</a></li>
+        <li><a href="file:///home/kariem/Downloads/web/html/Assignment Department.html">Assignment
+            Dipartment</a></li>
+        <li><a href="file:///home/kariem/Downloads/web/html/View students.html  ">View students</a></li>
+      </ul>
+    </nav>
+
+    <section class="background">
+      <h1>Edit Student</h1>
+      <p>Computers And Artificial Intelligince</p>
+    </section>
+  </header>
+
+  <section class="box">
+    <form ID="form">
+      <div class="input">
+        <div class="row">
+          <div class="col">
+            <div class="success">
+              <input type="text" placeholder="Name" name="name" id="name" class="input-field">
+            </div>
+            <p>Invalid name</p>
+          </div>
+
+          <div class="col">
+            <div class="success">
+              <input type="text" placeholder="ID" name="ID" class="input-field">
+            </div>
+            <p>Invalid ID</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="success">
+              <input type="text" placeholder="Mobile" name="mobile" class="input-field">
+            </div>
+            <p>Invalid name</p>
+          </div>
+
+          <div class="col">
+            <div class="success">
+              <input placeholder="Age" type="text" onfocus="(this.type='date')" name="Age" class="input-field" />
+            </div>
+            <p></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="success">
+              <input type="text" placeholder="GPA" name="GPA" class="input-field">
+            </div>
+            <p>Invalid name</p>
+          </div>
+
+          <div class="col">
+            <div class="success">
+              <input placeholder="E-Mail" type="text" name="mail" class="input-field" />
+            </div>
+            <p></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <select name="Department" class="success">
+              <option value="" disabled selected hidden>Department</option>
+              <option value="CS">CS</option>
+              <option value="IT">IT</option>
+              <option value="AI">AI</option>
+              <option value="IS">IS</option>
+              <option value="DS">DS</option>
+
+            </select>
+            <p>Invalid name</p>
+          </div>
+          <div class="col">
+            <select name="Gender" class="success">
+              <option value="" disabled selected hidden>Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            <p>Invalid name</p>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <select name="Level" class="success">
+              <option value="" disabled selected hidden>Level</option>
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+              <option value="3">Level 4</option>
+            </select>
+            <p>Invalid name</p>
+          </div>
+          <div class="col">
+            <select name="Status" class="success">
+              <option value="" disabled selected hidden>Status</option>
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+            <p>Invalid name</p>
+          </div>
+
+        </div>
+      </div>
+      <button type="submit" id="b1" class="btn">submit</button>
+    </form>
+  </section>
+  <script src="file:///home/kariem/Downloads/web/JS/register.js"></script>
+</body>
+
+</html>

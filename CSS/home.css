@@ -1,0 +1,40 @@
+.home-page {
+    background-image: url("file:///home/kariem/Downloads/web/homepage2.webp");
+    background-size: contain;
+    min-height: 90vh;
+}
+
+li a {
+    color: black !important;
+}
+
+li a:hover {
+    font-weight: bold;
+    color: #2596be !important;
+}
+
+.head {
+    margin: 2rem;
+    margin-top: 9rem;
+}
+
+.row {
+    margin-top: .5rem;
+    display: flex;
+    width: 25%;
+    justify-content: flex-start;
+}
+
+.btn2 {
+    background-color: transparent;
+    padding: 12px 3%;
+    margin-right: 5px;
+    color: black;
+
+}
+
+.btn2:hover {
+    font-weight: bold;
+    background-color: #2596be;
+    color: white;
+}
