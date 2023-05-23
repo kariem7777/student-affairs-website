@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'CSS/Search.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/header.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/utlilites.css' %}">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- <script src="index.js">
+    </script> -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:8000/"><i class="fa fa-house"></i> home</a></li>
+                <li><a href="http://127.0.0.1:8000/register-student">Resgister students</a></li>
+                <li><a href="http://127.0.0.1:8000/search-student">Search students</a></li>
+                <li><a href="http://127.0.0.1:8000/assign-dep">Assignment
+                        Dipartment</a></li>
+                <li><a href="http://127.0.0.1:8000/view-student">View students</a></li>
+            </ul>
+        </nav>
+
+        <section class="background">
+            <h1>Search Student</h1>
+            <p>Computers And Artificial Intelligince</p>
+        </section>
+    </header>
+
+    <div id="box">
+        <form class="search" method="POST" id="form">{% csrf_token %}
+            <input type="text" id="myInput" placeholder="Search Student" name="name" class="search-field">
+            <button type="submit" class="srch"> <i class="fa fa-search"></i></button>
+        </form>
+        <div class="search-area" id="area">
+
+        </div>
+    </div>
+
+    <!-- src="{% static 'JS/search.js' %}" -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const search2 = document.getElementById('myInput');
+        const searchArea = document.getElementById("area");
+
+        function wait(ms) {
+            return new Promise(resolve => {
+                setTimeout(() => { resolve('') }, ms);
+            })
+        }
+
+
+        async function printResult(arrf, index) {
+            if (index == 0) {
+                searchArea.innerHTML = '<h5>No Results Found</h5>';
+            } else {
+                searchArea.innerHTML = ' <h5>search results</h5>' + '<hr>';
+                for (let i = 0; i < index; ++i) {
+                    // let values = JSON.parse(localStorage.getItem(arrf[i]));
+                    let row = '<div class="result" id=' + arrf[i].pk + '>' +
+                        '<div class="name">' + arrf[i].fields.name + '</div>' +
+                        '<div class="btns">' +
+                        '<a class="btn" href="http://127.0.0.1:8000/edit-student?id=' + arrf[i].pk + '" name=' + arrf[i].pk + '>Edit</a>' +
+                        '<button class=" btn del" onclick="Delete(' + arrf[i].pk + ')">' + '<i class="fa fa-trash">' + '</i>' + '</button>' +
+                        '</div>' +
+                        '</div>'
+                    searchArea.insertAdjacentHTML('beforeend', row);
+                    await wait(200)
+                }
+            }
+        }
+
+        $(document).on('submit', '#form', function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: "{% url 'search' %}",
+                data: {
+                    name: $('#myInput').val(),
+                    choice: 0,
+                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+                },
+                success: function (data) {
+                    let d = JSON.parse(data);
+                    let s = Object.keys(d).length;
+                    console.log(s)
+                    printResult(d, s);
+
+                }
+            })
+        })
+
+
+        function Delete(i) {
+            $.ajax({
+                type: 'POST',
+                url: "{% url 'search' %}",
+                data: {
+                    name: i,
+                    choice: 1,
+                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+                },
+                success: function (data) {
+
+                    $('#' + i).remove();
+
+
+                }
+            })
+
+        }
+    </script>
+
+</body>
+
+</html>

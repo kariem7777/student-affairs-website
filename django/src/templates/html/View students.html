@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <!-- css -->
+
+    <link rel="stylesheet" href="{% static 'CSS/utlilites.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/header.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/view.css' %}">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- <script src="index.js">
+    </script> -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:8000/"><i class="fa fa-house"></i> home</a></li>
+                <li><a href="http://127.0.0.1:8000/register-student">Resgister students</a></li>
+                <li><a href="http://127.0.0.1:8000/search-student">Search students</a></li>
+                <li><a href="http://127.0.0.1:8000/assign-dep">Assignment
+                        Dipartment</a></li>
+                <li><a href="http://127.0.0.1:8000/view-student">View students</a></li>
+            </ul>
+        </nav>
+
+        <section class="background">
+            <h1>Search Student</h1>
+            <p>Computers And Artificial Intelligince</p>
+        </section>
+    </header>
+
+    <div id="box">
+        <div class="result-area" id="area">
+            <div id="contain">
+                <div class="result head">
+                    <div class="cell">Name</div>
+                    <div class="cell">ID</div>
+                    <div class="cell">GPA</div>
+                    <div class="cell">Department</div>
+                    <div class="cell">Level</div>
+                    <div class="cell">Mobile</div>
+                    <div class="cell">E-mail</div>
+                    <div class="cell">Status</div>
+                </div>
+            </div>
+            {% for i in students %}
+            {% if i.id|divisibleby:2 %}
+            <div class="result gray">
+                {% else %}
+                <div class="result">
+                    {% endif %}
+                    <div class="cell">{{i.name}}</div>
+                    <div class="cell">{{i.id}}</div>
+                    <div class="cell">{{i.gpa}}</div>
+                    <div class="cell">{{i.department}}</div>
+                    <div class="cell">{{i.level}}</div>
+                    <div class="cell">NULL</div>
+                    <div class="cell">NULL</div>
+                    <div class="cell">{{i.status}}</div>
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+
+
+</body>
+
+</html>

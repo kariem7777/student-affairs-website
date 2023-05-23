@@ -1,0 +1,65 @@
+body {
+    background-color: white;
+}
+
+.box {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -1.2rem;
+
+    z-index: 1000;
+    margin-bottom: 4rem;
+    animation: slide 1s, appear 1s backwards;
+}
+
+
+form {
+    padding: 10px;
+    background-color: white;
+    width: 30%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.col {
+    text-align: left;
+    padding: 5px;
+    width: 100%;
+}
+
+.col p {
+    color: red;
+    font-size: .8em;
+    display: none;
+}
+
+
+.error {
+    border: 1px solid red;
+    color: red;
+    border-radius: 5px;
+}
+
+.error-s {
+    border: 1px solid red;
+    color: red;
+}
+
+.success {
+
+    color: black;
+}
+
+select {
+    width: 100% !important;
+}

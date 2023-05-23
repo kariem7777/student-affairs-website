@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.back {
+    height: 100vh;
+
+    background-image: url("file:///home/kariem/Downloads/web/landing.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+
+a {
+    background-color: transparent;
+    height: 26vh;
+    width: 21%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px 15px;
+    border: 1px solid black;
+    transition: .5s;
+    backdrop-filter: blur(20px);
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+.container {
+    min-width: 50%;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}

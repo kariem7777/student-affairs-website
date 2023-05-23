@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student affairs</title>
+    <!-- css files -->
+    <!-- <link rel="stylesheet" href="file:///home/kariem/Downloads/web/CSS/home.css"> -->
+    <link rel="stylesheet" href="{% static 'CSS/header.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/utlilites.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/home.css' %}">
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+</head>
+
+<body class="home-page" style="animation: appear 1s;
+animation-fill-mode: forwards;">
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:8000/"><i class="fa fa-house"></i> home</a></li>
+            <li><a href="http://127.0.0.1:8000/register-student">Resgister students</a></li>
+            <li><a href="http://127.0.0.1:8000/search-student">Search students</a></li>
+            <li><a href="http://127.0.0.1:8000/assign-dep">Assignment
+                    Dipartment</a></li>
+            <li><a href="http://127.0.0.1:8000/view-student">View students</a></li>
+        </ul>
+    </nav>
+    <div class="head">
+        <div class="slide" style=" animation: slideright 1.5s, appear 1s backwards .3s;">
+            <h1>Fucalty Of</h1>
+            <h1 class="title">Computers And Artificial Intelligence</h1>
+            <h3>Cairo University</h3>
+        </div>
+        <div class="row">
+            <a href="Register students.html" class="btn btn2" style=" animation:appear 1s backwards .3s;">Register</a>
+            <a href="View students" class="btn btn2" style=" animation:appear 1s backwards .3s;">ViewStudents</a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

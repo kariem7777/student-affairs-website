@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'CSS/assignDep.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/header.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/utlilites.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:8000/"><i class="fa fa-house"></i> home</a></li>
+                <li><a href="http://127.0.0.1:8000/register-student">Resgister students</a></li>
+                <li><a href="http://127.0.0.1:8000/search-student">Search students</a></li>
+                <li><a href="http://127.0.0.1:8000/assign-dep">Assignment
+                        Dipartment</a></li>
+                <li><a href="http://127.0.0.1:8000/view-student">View students</a></li>
+            </ul>
+        </nav>
+
+        <section class="background">
+            <h1>Assign Department</h1>
+            <p>Computers And Artificial Intelligince</p>
+        </section>
+    </header>
+
+    <section class="box">
+        <form ID="form" method="post">{% csrf_token %}
+            <p id="p"></p>
+            <div class="input">
+                <div class="row">
+                    <div class="col">
+                        <div class="success">
+                            <input type="text" placeholder="Name" name="name" id="name" class="input-field">
+                        </div>
+                        <p>Invalid name</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <select name="Department" class="success" id="dp">
+                            <option value="" disabled selected hidden>Department</option>
+                            <option value="general">General</option>
+                            <option value="CS">CS</option>
+                            <option value="IT">IT</option>
+                            <option value="AI">AI</option>
+                            <option value="IS">IS</option>
+                            <option value="DS">DS</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" id="b1" class="btn">Assign</button>
+        </form>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let username = document.querySelector("[name='name']");
+        let dep = document.querySelector("[name='Department']");
+        const b1 = document.getElementById("b1");
+
+        let arr = Object.keys(localStorage)
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            if (Valid()) {
+                $.ajax({
+                    type: 'POST',
+                    url: "{% url 'assign' %}",
+                    data: {
+                        name: $('#name').val(),
+                        dep: $('#dp').val(),
+                        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+                    },
+                    success: function (data) {
+                        alert(data)
+                    }
+
+                })
+            }
+
+
+
+        });
+
+        let err = (element, msg) => {
+            element.parentElement.classList.remove('success');
+            element.parentElement.classList.add('error');
+            let parentEl = element.parentElement.parentElement.querySelector("p");
+            parentEl.innerHTML = msg;
+            parentEl.style.display = "block";
+        }
+        let errselect = (element) => {
+            element.classList.remove('success');
+            element.classList.add('error-s');
+
+        }
+        let succselect = (element) => {
+            element.classList.remove('error-s');
+
+        }
+
+        let succ = (element) => {
+            element.parentElement.classList.remove('error');
+            element.parentElement.classList.add('success');
+            let parentEl = element.parentElement.parentElement.querySelector("p");
+            parentEl.style.display = "none";
+        }
+
+        const Valid = () => {
+            let f = 0;
+            if (username.value === "") {
+                err(username, "Enter name");
+                f = 1;
+            } else {
+                succ(username);
+            }
+            if (dep.value == "") {
+                errselect(dep);
+                f = 1;
+            } else {
+                succselect(dep)
+            }
+            if (f) {
+                return false
+            }
+            return true
+        }
+
+
+
+    </script>
+</body>
+
+</html>

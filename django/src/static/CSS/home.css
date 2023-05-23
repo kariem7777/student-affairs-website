@@ -1,0 +1,50 @@
+.home-page {
+    background-image: url("homepage2.webp");
+    background-size: contain;
+    min-height: 90vh;
+    animation: appear 1s;
+    animation-fill-mode: forwards;
+}
+
+
+
+li a {
+    color: black !important;
+}
+
+li a:hover {
+    font-weight: bold;
+    color: #2596be !important;
+}
+
+.head {
+    margin: 2rem;
+    margin-top: 9rem;
+
+}
+
+.slide {
+    animation: slideright 1.5s, appear 1s backwards .3s;
+}
+
+.row {
+    margin-top: .5rem;
+    display: flex;
+    width: 25%;
+    justify-content: flex-start;
+    animation: appear 3s backwards .5s;
+}
+
+.btn2 {
+    background-color: transparent;
+    padding: 12px 3%;
+    margin-right: 5px;
+    color: black;
+
+}
+
+.btn2:hover {
+    font-weight: bold;
+    background-color: #2596be;
+    color: white;
+}
